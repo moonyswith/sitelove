@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наш Навсегда 🤍</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Экран блокировки в стиле iOS -->
+<section class="ios-screen" id="welcome-screen">
+    <div class="ios-status-bar">
+        <span>🤍 0.5 Years</span>
+        <span>100% 🔋</span>
+    </div>
+    <div class="ios-widget">
+        <h1 id="live-clock">00:00</h1>
+        <p class="widget-date">28 ноября — День, когда всё изменилось</p>
+    </div>
+
+    <!-- Музыкальный плеер в стиле Dynamic Island / Виджета iOS -->
+    <div class="ios-player">
+        <div class="player-info">
+            <div class="player-icon">🎵</div>
+            <div>
+                <div id="track-title" class="track-title">Наша музыка</div>
+                <div class="track-subtitle">Любимые треки</div>
+            </div>
+        </div>
+        <div class="player-controls">
+            <button id="prev-btn" class="player-btn">⏮</button>
+            <button id="play-btn" class="player-btn">▶️</button>
+            <button id="next-btn" class="player-btn">⏭</button>
+        </div>
+        <!-- Скрытый тег аудио -->
+        <audio id="audio-element" src="track1.mp3"></audio>
+    </div>
+
+    <div class="ios-notification animate-pop">
+        <div class="noti-header">
+            <span class="noti-icon">❤️</span>
+            <span class="noti-title">Напоминание</span>
+            <span class="noti-time">Сейчас</span>
+        </div>
+        <p class="noti-body">Включи музыку выше и давай листай вниз да</p>
+    </div>
+</section>
+
+<!-- Основной контейнер с боковыми виджетами и галереей -->
+<div class="desktop-layout-container">
+
+    <!-- ЛЕВАЯ ПАНЕЛЬ: Заметки и напоминания -->
+    <aside class="side-widget-panel left-panel">
+        <div class="ios-side-card">
+            <div class="widget-header">📌 Заметки</div>
+            <ul class="notes-list">
+                <li>Дать вкусности 🍫</li>
+                <li>Обниматся, целаватся 🤗</li>
+                <li>Дать мизинчик первым</li>
+            </ul>
+        </div>
+        <div class="ios-side-card highlight-card">
+            <div class="widget-header">💭 Наши фразы</div>
+            <p class="quote-text">«НУЭУ, козя базя, злиться она, отстань, привет Сири - позвони контакту Папа»</p>
+        </div>
+    </aside>
+
+    <!-- ЦЕНТР: Сетка с фотографиями (РОВНО 6 СЛОТОВ) -->
+    <main class="content-wrapper">
+        <h2 class="section-title">Наша история</h2>
+
+        <div class="gallery-grid">
+            <!-- Ряд 1 -->
+            <div class="photo-card reveal">
+                <img src="photo1.jpg" alt="Фото 1">
+                <div class="card-desc">Тут мы снимали трамвай :)</div>
+            </div>
+            <div class="photo-card reveal">
+                <img src="photo2.jpg" alt="Фото 2">
+                <div class="card-desc">Ну просто легендарня фотка️</div>
+            </div>
+
+            <!-- Ряд 2 -->
+            <div class="photo-card reveal">
+                <img src="photo3.jpg" alt="Фото 3">
+                <div class="card-desc">А это на притяге было оч классно</div>
+            </div>
+            <div class="photo-card reveal">
+                <img src="photo4.jpg" alt="Фото 4">
+                <div class="card-desc">Муж злой а жена довольна</div>
+            </div>
+
+            <!-- Ряд 3 -->
+            <div class="photo-card reveal">
+                <img src="photo5.jpg" alt="Фото 5">
+                <div class="card-desc">Наша тачка, в 18 поедем</div>
+            </div>
+            <div class="photo-card reveal">
+                <img src="photo6.jpg" alt="Фото 6">
+                <div class="card-desc">А это у нас на обоях в тг :))</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ПРАВАЯ ПАНЕЛЬ: Календарь и Погода -->
+    <aside class="side-widget-panel right-panel">
+        <div class="ios-side-card">
+            <div class="widget-header">📅 Важные даты</div>
+            <div class="dates-tracker">
+                <div class="date-item"><strong>28.11.2025</strong> — Познакомились ❤️</div>
+                <div class="date-item"><strong>28.05.2026</strong> — Полгода отношений ✨</div>
+            </div>
+        </div>
+        <div class="ios-side-card weather-widget">
+            <div class="widget-header">☀️ Погода в моем сердце</div>
+            <div class="weather-temp">+100°C</div>
+            <div class="weather-cond">Рядом с тобой всегда тепло</div>
+        </div>
+    </aside>
+
+</div> <!-- Конец основного контейнера -->
+
+<!-- Нижняя интерактивная секция (Счетчик и Игра) -->
+<section class="interactive-section">
+    <div class="ios-card text-center">
+        <h3>Сколько мы вместе?</h3>
+        <button class="ios-btn" id="counter-btn">Узнать точное время ⏳</button>
+        <div id="counter-result" class="hidden-info"></div>
+    </div>
+
+    <!-- Мини-игра -->
+    <div class="ios-card text-center game-card">
+        <h3>Мини-игра: Поймай любовь</h3>
+        <p>Успей нажать на сердце 5 раз, чтобы открыть секретное послание!</p>
+        <div class="game-area">
+            <div id="heart-target">❤️</div>
+        </div>
+        <div id="game-win-msg" class="hidden-info font-love">
+            Твой приз это я :) Я тебя люблю 🌹
+        </div>
+    </div>
+</section>
+
+<script src="main.js"></script>
+</body>
+</html>
