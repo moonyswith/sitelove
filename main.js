@@ -52,7 +52,8 @@ document.getElementById('counter-btn').addEventListener('click', function() {
 const playlist = [
     { title: "Safe And Sound", src: "track1.mp3" },
     { title: "mirrors demo", src: "track2.mp3" },
-    { title: "Я вытащу тебя со дна", src: "track3.mp3" }
+    { title: "Я вытащу тебя со дна", src: "track3.mp3" },
+    { title: "In and out of Love", src: "track4.mp3" }
 ];
 
 let currentTrackIndex = 0;
