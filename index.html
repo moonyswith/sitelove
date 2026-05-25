@@ -19,7 +19,7 @@
         <p class="widget-date">28 ноября — День, когда всё изменилось</p>
     </div>
 
-    <!-- Музыкальный плеер в стиле Dynamic Island / Вижета iOS -->
+    <!-- Музыкальный плеер -->
     <div class="ios-player">
         <div class="player-info">
             <div class="player-icon">🎵</div>
@@ -33,7 +33,6 @@
             <button id="play-btn" class="player-btn">▶️</button>
             <button id="next-btn" class="player-btn">⏭</button>
         </div>
-        <!-- Скрытый тег аудио -->
         <audio id="audio-element" src="track1.mp3"></audio>
     </div>
 
@@ -43,55 +42,50 @@
             <span class="noti-title">Напоминание</span>
             <span class="noti-time">Сейчас</span>
         </div>
-        <p class="noti-body">Включи музыку выше и давай листай вниз да</p>
+        <p class="noti-body">Включи музыку выше и листай вниз... Твой сюрприз ждет!</p>
     </div>
 </section>
 
-<!-- Основной контейнер с боковыми виджетами и галереей -->
+<!-- Главный контейнер -->
 <div class="desktop-layout-container">
 
-    <!-- ЛЕВАЯ ПАНЕЛЬ: Заметки и напоминания -->
+    <!-- ЛЕВАЯ ПАНЕЛЬ (на ПК слева, на телефоне упадет вниз) -->
     <aside class="side-widget-panel left-panel">
         <div class="ios-side-card">
             <div class="widget-header">📌 Заметки</div>
             <ul class="notes-list">
-                <li>Дать вкусности 🍫</li>
-                <li>Обниматся, целаватся 🤗</li>
+                <li>Дать вкусности 🍰</li>
+                <li>Обниматься, целоваться 🧸</li>
                 <li>Дать мизинчик первым</li>
             </ul>
         </div>
         <div class="ios-side-card highlight-card">
-            <div class="widget-header">💭 Наши фразы</div>
-            <p class="quote-text">«НУЭУ, козя базя, злиться она, отстань, привет Сири - позвони контакту Папа»</p>
+            <div class="widget-header">💭 НАШИ ФРАЗЫ</div>
+            <p class="quote-text">«НУУУ, коза базя, злится она, отстань, привет Сири - позвони контакту Папа»</p>
         </div>
     </aside>
 
-    <!-- ЦЕНТР: Сетка с фотографиями (РОВНО 6 СЛОТОВ) -->
+    <!-- ЦЕНТР: Сетка с фотографиями -->
     <main class="content-wrapper">
         <h2 class="section-title">Наша история</h2>
 
         <div class="gallery-grid">
-            <!-- Ряд 1 -->
             <div class="photo-card reveal">
                 <img src="photo1.jpg" alt="Фото 1">
                 <div class="card-desc">Тут мы снимали трамвай :)</div>
             </div>
             <div class="photo-card reveal">
                 <img src="photo2.jpg" alt="Фото 2">
-                <div class="card-desc">Ну просто легендарня фотка️</div>
+                <div class="card-desc">Ну просто легендарная фотка</div>
             </div>
-
-            <!-- Ряд 2 -->
             <div class="photo-card reveal">
                 <img src="photo3.jpg" alt="Фото 3">
-                <div class="card-desc">А это на притяге было оч классно</div>
+                <div class="card-desc">А это на притяге было оч классно️</div>
             </div>
             <div class="photo-card reveal">
                 <img src="photo4.jpg" alt="Фото 4">
                 <div class="card-desc">Муж злой а жена довольна</div>
             </div>
-
-            <!-- Ряд 3 -->
             <div class="photo-card reveal">
                 <img src="photo5.jpg" alt="Фото 5">
                 <div class="card-desc">Наша тачка, в 18 поедем</div>
@@ -103,7 +97,7 @@
         </div>
     </main>
 
-    <!-- ПРАВАЯ ПАНЕЛЬ: Календарь и Погода -->
+    <!-- ПРАВАЯ ПАНЕЛЬ (на ПК справа, на телефоне упадет вниз) -->
     <aside class="side-widget-panel right-panel">
         <div class="ios-side-card">
             <div class="widget-header">📅 Важные даты</div>
@@ -119,9 +113,9 @@
         </div>
     </aside>
 
-</div> <!-- Конец основного контейнера -->
+</div>
 
-<!-- Нижняя интерактивная секция (Счетчик и Игра) -->
+<!-- Интерактивная секция (Счетчик и Игра) -->
 <section class="interactive-section">
     <div class="ios-card text-center">
         <h3>Сколько мы вместе?</h3>
@@ -129,7 +123,6 @@
         <div id="counter-result" class="hidden-info"></div>
     </div>
 
-    <!-- Мини-игра -->
     <div class="ios-card text-center game-card">
         <h3>Мини-игра: Поймай любовь</h3>
         <p>Успей нажать на сердце 5 раз, чтобы открыть секретное послание!</p>
