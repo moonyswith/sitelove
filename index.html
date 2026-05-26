@@ -16,24 +16,50 @@
     </div>
     <div class="ios-widget">
         <h1 id="live-clock">00:00</h1>
-        <p class="widget-date">28 ноября — День, когда всё изменилось</p>
+        <p class="widget-date">28 ноября - День, когда всё изменилось</p>
     </div>
 
     <!-- Музыкальный плеер -->
     <div class="ios-player">
-        <div class="player-info">
-            <div class="player-icon">🎵</div>
-            <div>
-                <div id="track-title" class="track-title">Наша музыка</div>
-                <div class="track-subtitle">Любимые треки</div>
+        <div class="player-main-row">
+            <div class="player-info">
+                <div class="player-icon">🎵</div>
+                <div>
+                    <div id="track-title" class="track-title">In and out of Love</div>
+                    <div class="track-subtitle">Любимые треки</div>
+                </div>
+            </div>
+            <div class="player-controls">
+                <button id="prev-btn" class="player-btn">
+                    <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+                </button>
+                <button id="play-btn" class="player-btn">
+                    <svg id="play-icon-svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <button id="next-btn" class="player-btn">
+                    <svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zm9-12v12h2V6h-2z"/></svg>
+                </button>
             </div>
         </div>
-        <div class="player-controls">
-            <button id="prev-btn" class="player-btn">⏮</button>
-            <button id="play-btn" class="player-btn">▶</button>
-            <button id="next-btn" class="player-btn">⏭</button>
+
+        <!-- Ползунок времени -->
+        <div class="player-progress-container">
+            <input type="range" id="progress-bar" min="0" max="100" value="0" class="ios-slider">
+            <div class="time-info">
+                <span id="current-time">0:00</span>
+                <span id="total-time">0:00</span>
+            </div>
         </div>
+
         <audio id="audio-element" src="track1.mp3"></audio>
+    </div>
+
+    <!-- Виджет текста песни (Караоке) -->
+    <div class="ios-lyrics-container">
+        <div id="lyrics-box" class="lyrics-box">
+            <p id="lyric-line-1" class="lyric-line active">Текст песни появится при старте трека... 🤍</p>
+            <p id="lyric-line-2" class="lyric-line next"></p>
+        </div>
     </div>
 
     <div class="ios-notification animate-pop">
@@ -46,7 +72,7 @@
     </div>
 </section>
 
-<!-- Главный контейнер (Строгий порядок: ЛЕВО - ЦЕНТР - ПРАВО) -->
+<!-- Главный контейнер (Сетка) -->
 <div class="desktop-layout-container">
 
     <!-- ЛЕВАЯ ПАНЕЛЬ -->
@@ -65,7 +91,7 @@
         </div>
     </aside>
 
-    <!-- ЦЕНТР: Сетка с фотографиями -->
+    <!-- ЦЕНТР: Сетка с фотографиями и вашими подписями -->
     <main class="content-wrapper">
         <h2 class="section-title">Наша история</h2>
 
@@ -88,7 +114,7 @@
             </div>
             <div class="photo-card reveal">
                 <img src="photo5.jpg" alt="Фото 5">
-                <div class="card-desc">Наша тачка, в 18 поедем</div>
+                <div class="card-desc">Наша тачка, п 18 поедем</div>
             </div>
             <div class="photo-card reveal">
                 <img src="photo6.jpg" alt="Фото 6">
@@ -115,7 +141,7 @@
 
 </div>
 
-<!-- Интерактивная секция (Счетчик и Игра) -->
+<!-- Ниже фотографий (Счетчик и Игра) -->
 <section class="interactive-section">
     <div class="ios-card text-center">
         <h3>Сколько мы вместе?</h3>
@@ -123,14 +149,15 @@
         <div id="counter-result" class="hidden-info"></div>
     </div>
 
+    <!-- Мини-игра «Поймай любовь» -->
     <div class="ios-card text-center game-card">
         <h3>Мини-игра: Поймай любовь</h3>
         <p>Успей нажать на сердце 5 раз, чтобы открыть секретное послание!</p>
         <div class="game-area">
-            <div id="heart-target">❤️</div>
+            <div id="heart-target" style="font-size: 35px; cursor: pointer; user-select: none; position: absolute; left: 45%; top: 35%; transition: all 0.2s ease;">❤️</div>
         </div>
-        <div id="game-win-msg" class="hidden-info font-love">
-            Твой приз это я :) Я тебя люблю 🌹
+        <div id="game-win-msg" class="hidden-info font-love" style="display: none; font-size: 18px; font-weight: 600; margin-top: 15px; color: #ff2d55;">
+            Твой приз это я : ) Я тебя люблю 🌹
         </div>
     </div>
 </section>
